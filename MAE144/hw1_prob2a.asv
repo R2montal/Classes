@@ -31,17 +31,12 @@ test = trim(a*x + b*y);
 
 % a(s) and b(s) do not change, only f(s) is modified by modifiying k.
 
-%multiple for k=3 by (s+20)^k (this no work) 
-%f = RR_poly([-1 -61 -1263 -9383 -11786 -27966 -31560 -55200 -48000], 1);
-
-%multiple for k=5 by (s+20)^k (this no work) 
-f = RR_poly([-1 -101 -4103 -84303 -892306 -4252606 -5864600 -12504000 ...
-    -1488000 -24000000 -19200000], 1);
+%multiple for k=2 by (s+20)^k
+f = RR_poly([-1 -61 -1263 -9383 -11786 -27966 -], 1);
 
 [x,y] = RR_diophantine(a, b, f)
 
-% if k = 5 then we have order y(s) to be greater then the highest order of
-% x(s) making this controller PROPER
+% if k = 2 then we have y
 
 
 
